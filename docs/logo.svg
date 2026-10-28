@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" role="img" aria-label="Treelog">
+  <title>Treelog</title>
+  <g transform="translate(4 4)">
+    <rect width="56" height="56" rx="12" fill="#14332b"/>
+    <rect x="8" y="8" width="40" height="13" rx="3" fill="#2e9477"/>
+    <rect x="8" y="25" width="17" height="23" rx="3" fill="#7cc9ae"/>
+    <rect x="29" y="25" width="19" height="10" rx="3" fill="#1f6f5c"/>
+    <rect x="29" y="38" width="19" height="10" rx="3" fill="#e5484d"/>
+  </g>
+  <text x="76" y="43" font-family="Inter,'Helvetica Neue',Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="-0.5" fill="#14332b">Tree<tspan font-weight="400" fill="#2e9477">log</tspan></text>
+</svg>

@@ -1,0 +1,27 @@
+services:
+  treelog:
+    build: .
+    image: treelog:latest
+    container_name: treelog
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${PORT:-8080}:${PORT:-8080}"
+    volumes:
+      - ${LOG_DIR:?Set LOG_DIR in .env to the directory containing the nginx or Apache logs}:/logs:ro
+      - data:/data
+    env_file: .env
+    user: "65534:65534"
+    group_add: ["${LOG_GID:-4}"]
+    read_only: true
+    tmpfs: ["/tmp:size=8m"]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 64
+    logging:
+      driver: json-file
+      options: { max-size: "1m", max-file: "2" }
+
+volumes:
+  data:
